@@ -2,6 +2,7 @@ package list;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class OrdenacaoList {
@@ -12,12 +13,27 @@ public class OrdenacaoList {
             add(new Gato("Mel", 5, "Branca"));
 
         }};
+
         //embaralha a lista
         Collections.shuffle(meusGatos);
+        System.out.println("---\tOrdem aleatória\t---");
         System.out.println(meusGatos);
 
         //ordem natural da lista
+        System.out.println("---\tOrdem Natural (Nome)\t---");
         Collections.sort(meusGatos);
+        System.out.println(meusGatos);
+
+        //ordem por idade
+        System.out.println("---\tOrdem Idade\t---");
+        Collections.sort(meusGatos, new ComparatorIdade());
+        //Collections.sort(new ComparatorIdade());
+        System.out.println(meusGatos);
+
+        //ordem por cor
+        System.out.println("---\tOrdem Cor\t---");
+        Collections.sort(meusGatos, new ComparatorCor());
+        //Collections.sort(new ComparatorIdade());
         System.out.println(meusGatos);
 
     }
@@ -62,5 +78,21 @@ class Gato implements Comparable<Gato> {
     @Override
     public int compareTo(Gato gato) {
         return this.getNome().compareToIgnoreCase(gato.getNome());
+    }
+}
+
+class ComparatorIdade implements Comparator<Gato>{
+
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+    }
+}
+
+class ComparatorCor implements Comparator<Gato>{
+
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return g1.getCor().compareToIgnoreCase(g2.getCor());
     }
 }
