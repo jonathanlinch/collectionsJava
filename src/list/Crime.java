@@ -16,8 +16,12 @@ Se a pessoa responder positivamente a 2 questões ela deve ser classificada como
 */
 public class Crime {
     public static void main(String[] args) {
-        String[] perguntas = {"Telefonou para a vítima?", "Esteve no local do crime?", "Mora perto da vítima?",
-                "Devia para a vítima?", "Já trabalhou com a vítima?"};
+        String[] perguntas = {"Telefonou para a vítima?",
+                "Esteve no local do crime?",
+                "Mora perto da vítima?",
+                "Devia para a vítima?",
+                "Já trabalhou com a vítima?"};
+
         Scanner scan = new Scanner(System.in);
         List<String> respostas = new ArrayList<>();
         String resposta;
