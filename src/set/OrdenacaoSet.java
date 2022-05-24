@@ -1,4 +1,8 @@
-package list;
+package set;
+
+import list.ComparatorGenero;
+import list.ComparatorNomeGeneroTempoEpisodio;
+import list.ComparatorTempo;
 
 import java.util.*;
 

@@ -1,8 +1,8 @@
-package list;
+package set;
 
 import java.util.Objects;
 
-class Serie implements Comparable<Serie>{
+public class Serie implements Comparable<Serie>{
     private final String nome;
     private final String genero;
     private final Integer tempoEpisodio;

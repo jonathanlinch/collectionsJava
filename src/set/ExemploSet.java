@@ -1,4 +1,4 @@
-package list;
+package set;
 
 import java.util.*;
 
@@ -59,11 +59,9 @@ public class ExemploSet {
 
         System.out.println("Exiba todas as notas na ordem em que foram informados: ");
         Set<Double> notas2 = new LinkedHashSet<>();
-        notas2.add(7d);
         notas2.add(8.5);
         notas2.add(9.3);
         notas2.add(5d);
-        notas2.add(7d);
         notas2.add(0d);
         notas2.add(3.6);
         System.out.println(notas2);
