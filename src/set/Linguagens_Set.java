@@ -28,11 +28,17 @@ public class Linguagens_Set {
         System.out.println("\t---Ordem por IDE---\t");
         Set<LinguagensFavoritas> linguagens3 = new TreeSet<>(new ComparatorIDE());
         linguagens3.addAll(linguagens);
-        for (LinguagensFavoritas l:linguagens3) {
-            System.out.println(l);
-        }
+        for (LinguagensFavoritas l:linguagens3) System.out.println(l);
 
         System.out.println("\t---Ordem por ano de criação e nome---\t");
-        Set<LinguagensFavoritas> linguagens4 = new TreeSet<>();
+        Set<LinguagensFavoritas> linguagens4 = new TreeSet<>(new ComparatorNomeAno());
+        linguagens4.addAll(linguagens);
+        for (LinguagensFavoritas l:linguagens4) System.out.println(l);
+
+        System.out.println("\t---Oredem por Nome, ano de criação, e IDE---\t");
+        Set<LinguagensFavoritas> linguagens5 = new TreeSet<>(new ComparatorNomeAnoIDE());
+        linguagens5.addAll(linguagens);
+        for (LinguagensFavoritas l:linguagens5) System.out.println(l);
+
     }
 }
