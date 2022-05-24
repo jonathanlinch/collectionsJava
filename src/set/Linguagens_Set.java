@@ -24,5 +24,15 @@ public class Linguagens_Set {
         System.out.println("\t---Ordem natural---\t");
         Set<LinguagensFavoritas> linguagens2 = new TreeSet<>(linguagens);
         for (LinguagensFavoritas l:linguagens2) System.out.println(l);
+
+        System.out.println("\t---Ordem por IDE---\t");
+        Set<LinguagensFavoritas> linguagens3 = new TreeSet<>(new ComparatorIDE());
+        linguagens3.addAll(linguagens);
+        for (LinguagensFavoritas l:linguagens3) {
+            System.out.println(l);
+        }
+
+        System.out.println("\t---Ordem por ano de criação e nome---\t");
+
     }
 }
