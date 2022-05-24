@@ -2,7 +2,7 @@ package set;
 
 import java.util.Objects;
 
-public class Cor implements Comparable<String>{
+public class Cor implements Comparable<Cor>{
     private final String cor;
 
     public Cor(String cor) {
@@ -34,7 +34,7 @@ public class Cor implements Comparable<String>{
     }
 
     @Override
-    public int compareTo(String o) {
-        return 0;
+    public int compareTo(Cor cor) {
+        return this.getCor().compareTo(cor.getCor());
     }
 }
